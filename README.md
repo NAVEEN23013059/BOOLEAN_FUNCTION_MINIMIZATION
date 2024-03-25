@@ -40,20 +40,28 @@ Developed by: S.NAVEEN
 RegisterNumber: 212223240106
 
 module combinationalcircuit(A,B,C,D,F1);
+
 input A,B,C,D;
+
 output F1;
+
 wire x1,x2,x3,x4,x5;
+
 assign x1=(~A)&(~B)&(~C)&(~D);
+
 assign x2=(A)&(~C)&(~D);
+
 assign x3=(~B)&(C)&(~D);
+
 assign x4=(~A)&(B)&(C)&(D);
+
 assign x5=(B)&(~C)&(D);
+
 assign F1=x1|x2|x3|x4|x5;
 
 
 **RTL realization**
 ![Screenshot 2024-03-26 002919](https://github.com/NAVEEN23013059/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319555/eabd50da-8503-4c9f-baae-6c1fa6e84c6f)
-**Output:**
 
 **Timing Diagram**
 ![Screenshot 2024-03-26 003020](https://github.com/NAVEEN23013059/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319555/8d3b419a-b542-4e17-b0fb-d47ce635b08e)
