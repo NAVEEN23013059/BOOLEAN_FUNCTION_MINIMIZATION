@@ -33,38 +33,56 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-Program to implement the given logic function and
-to verify its operations in quartus using Verilog programming. 
+Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: S.NAVEEN
+Developed by: NAVEEN.S
 RegisterNumber: 212223240106
 
-module combinationalcircuit(A,B,C,D,F1);
+**2a**
+~~~
+module ex2a(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~a&b&d)|(~b&~d)|(a&b&~c));
+endmodule
+~~~
+**2b**
+~~~
+module ex2b(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y&z)|(x&y)|(w&y));
+endmodule
+~~~
+**Output**
 
-input A,B,C,D;
+**2a**
 
-output F1;
+![WhatsApp Image 2025-04-07 at 13 37 37_f6fbd456](https://github.com/user-attachments/assets/afb62b53-039a-4224-a156-5eb6b1e97b16)
 
-wire x1,x2,x3,x4,x5;
+**2b**
 
-assign x1=(~A)&(~B)&(~C)&(~D);
-
-assign x2=(A)&(~C)&(~D);
-
-assign x3=(~B)&(C)&(~D);
-
-assign x4=(~A)&(B)&(C)&(D);
-
-assign x5=(B)&(~C)&(D);
-
-assign F1=x1|x2|x3|x4|x5;
-
+![WhatsApp Image 2025-04-07 at 13 37 38_a27026d8](https://github.com/user-attachments/assets/c4c0e693-103f-4f3c-a8d9-c1890fe268b0)
 
 **RTL realization**
-![Screenshot 2024-03-26 002919](https://github.com/NAVEEN23013059/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319555/eabd50da-8503-4c9f-baae-6c1fa6e84c6f)
 
-**Timing Diagram**
-![Screenshot 2024-03-26 003020](https://github.com/NAVEEN23013059/BOOLEAN_FUNCTION_MINIMIZATION/assets/150319555/8d3b419a-b542-4e17-b0fb-d47ce635b08e)
+**2a**
+
+![428376043-7e81e3d0-a02f-4866-9b21-e3848c789032](https://github.com/user-attachments/assets/dc7c5eb9-90c5-48f2-93bb-f6f47d1f1d3d)
+
+**2b**
+
+![428376070-adf7c15e-9709-4f98-ae26-c38704af1e0b](https://github.com/user-attachments/assets/549837b3-336d-4aca-ba44-2d531db537c8)
+
+**RTL**
+
+**2a**
+
+![428376078-ecbdb491-3a4f-4b84-a880-7cc8be923b76](https://github.com/user-attachments/assets/bcf8bc32-2423-4b37-9d47-86e01d398fcb)
+
+**2b**
+
+![428376094-07b65b9a-c07e-4235-a1fc-336b87a9b8d4](https://github.com/user-attachments/assets/e5cf7e3b-0189-4aaf-8b16-1bd6f151e7c1)
 
 **Result:**
 
